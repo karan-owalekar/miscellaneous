@@ -59,3 +59,16 @@ The simulation generates virtual candidates with:
 **Surprising Findings from 10,000 Candidates over 1,000 Iterations:**
 - With **1% luck weighting** (99% skills):
 Selected candidates exhibited extremely high luck scores (average ≈95%)
+
+## 🌟 Needle Dropping Simulation
+
+The “Needle Dropping” simulation implements **Buffon’s Needle** experiment to estimate the value of π. In this simulation, needles of a given length are “dropped” onto a surface marked with equally spaced parallel lines. By counting how often a needle crosses a line, you can derive an approximation of π.
+
+### Explanation:
+
+- Needles of length **L** (with **L ≤ t**) are dropped randomly onto a region with vertical lines spaced by distance **t**.
+- Each drop picks a uniform random center position and a random orientation in [0, π).
+- A needle “crosses” if its two endpoints lie in different adjacent strips between the lines.
+- Crossing probability: `P_cross ≈ 2 L / (π · t)`
+- After **N** drops and **H** crossings, estimate π as:  
+  `π ≈ (2 · L · N) / (t · H)`
